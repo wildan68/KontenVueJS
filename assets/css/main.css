@@ -38,3 +38,9 @@ input {
     width: 0px;
     background: transparent;
 }
+
+.rainbow {
+    background-image: linear-gradient(to left, violet, indigo, rgb(255, 0, 81), rgb(128, 0, 115));
+    -webkit-background-clip: text;
+    color: transparent;
+}

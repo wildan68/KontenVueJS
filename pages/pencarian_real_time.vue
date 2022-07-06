@@ -55,14 +55,13 @@ export default {
             movie_data: null,
         }
     },
-    watch:{
+    watch: {
         // Watch searchInput untuk mengecek apakah terdapat kata kunci pencarian atau tidak
-        searchInput(val){
-            if(val != ''){
+        searchInput(val) {
+            if (val != '') {
                 // Jika terdapat kata kunci pencarian, akan menjalankan fungsi search()
                 this.search(val);
-            }
-            else {
+            } else {
                 // Jika tidak terdapat kata kunci pencarian, akan menghapus hasil pencarian
                 this.searchResult = [];
             }
@@ -70,7 +69,7 @@ export default {
     },
     methods: {
         search(wordKey) {
-            // Mencari Kata Kunci Pencarian yang di Input di movie_data berdasarkan Title
+            // Mencari Kata Kunci Pencarian yang di Input di movie_data menggunakan Filter berdasarkan Title
             // dan menampungnya di searchResult
             this.searchResult = this.movie_data.filter(item => {
                 return item.Title.toLowerCase().includes(wordKey.toLowerCase());
@@ -110,7 +109,7 @@ export default {
     cursor: pointer;
     background-color: #fff;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-     z-index: 10;
+    z-index: 10;
 }
 
 .search-box {
@@ -119,7 +118,7 @@ export default {
     position: relative;
     align-items: center;
     width: 250px;
-   
+
 }
 
 .search-box input[type=text] {
@@ -144,7 +143,7 @@ export default {
 }
 
 .search-box .search-result {
-    position: absolute ;
+    position: absolute;
     top: 100%;
     height: auto;
     left: 0;
